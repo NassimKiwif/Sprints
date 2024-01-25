@@ -113,3 +113,16 @@ let shortestOfMixed = (array)=> {
     else return minArray[0]
 
 }
+//shortestofmixed undefined...
+//Or (corrected version)
+let shortestOfMixed2 = (array) => {
+    let shortest = null;
+    let minLength = Infinity;
+    for (let element of array) {
+        if (typeof element === 'string' && element.length < minLength) {
+            minLength = element.length;
+            shortest = element;
+        }
+    }
+    return shortest;
+}
